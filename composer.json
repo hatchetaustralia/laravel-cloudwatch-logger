@@ -1,13 +1,14 @@
 {
-    "name": "tarfin-labs/laravel-cloudwatch-logger",
+    "name": "hatchetaustralia/laravel-cloudwatch-logger",
     "description": "Laravel logger for AWS Clouldwatch Log service.",
     "keywords": [
-        "tarfin-labs",
+        "hatchet",
+        "hatchetaustralia",
         "laravel",
         "cloudwatch",
         "laravel-cloudwatch-logger"
     ],
-    "homepage": "https://github.com/tarfin-labs/laravel-cloudwatch-logger",
+    "homepage": "https://github.com/hatchetaustralia/laravel-cloudwatch-logger",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -30,6 +31,11 @@
             "name": "Hakan Özdemir",
             "email": "hakan.ozdemir@tarfin.com",
             "role": "Developer"
+        },
+        {
+            "name": "Matt Hare",
+            "email": "matt@hatchet.com.au",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -43,12 +49,12 @@
     },
     "autoload": {
         "psr-4": {
-            "TarfinLabs\\LaravelCloudWatchLogger\\": "src"
+            "Hatchet\\LaravelCloudWatchLogger\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TarfinLabs\\LaravelCloudWatchLogger\\Tests\\": "tests"
+            "Hatchet\\LaravelCloudWatchLogger\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -62,7 +68,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "TarfinLabs\\LaravelCloudWatchLogger\\LaravelCloudWatchLoggerServiceProvider"
+                "Hatchet\\LaravelCloudWatchLogger\\LaravelCloudWatchLoggerServiceProvider"
             ]
         }
     }

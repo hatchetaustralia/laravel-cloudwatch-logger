@@ -1,6 +1,6 @@
 <?php
 
-namespace TarfinLabs\LaravelCloudWatchLogger;
+namespace Hatchet\LaravelCloudWatchLogger;
 
 use Aws\CloudWatchLogs\CloudWatchLogsClient;
 use Maxbanton\Cwh\Handler\CloudWatch;
@@ -31,8 +31,11 @@ class LaravelCloudWatchLoggerFactory
         // Days to keep logs, 14 by default. Set to 'null' to allow indefinite retention
         $retentionDays = $config['retention'];
 
+        // Batch size, which we default to 10000
+        $batchSize = isset($config['batch_size']) ? $config['batch_size'] : 10000;
+
         // Instantiate handler (tags are optional)
-        $handler = new CloudWatch($client, $groupName, $streamName, $retentionDays, 10000, $tags);
+        $handler = new CloudWatch($client, $groupName, $streamName, $retentionDays, $batchSize, $tags);
 
         // Create a log channel
         $logger = new Logger($name);

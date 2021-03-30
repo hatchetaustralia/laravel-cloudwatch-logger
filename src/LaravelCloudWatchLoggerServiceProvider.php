@@ -1,6 +1,6 @@
 <?php
 
-namespace TarfinLabs\LaravelCloudWatchLogger;
+namespace Hatchet\LaravelCloudWatchLogger;
 
 use Illuminate\Support\ServiceProvider;
 

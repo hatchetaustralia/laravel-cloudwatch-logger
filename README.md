@@ -7,7 +7,7 @@ Laravel logger factory for AWS Cloudwatch Logs service.
 You can install the package via composer:
 
 ```bash
-composer require tarfin-labs/laravel-cloudwatch-logger
+composer require hatchetaustralia/laravel-cloudwatch-logger
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ You need to add new channel as `cloudwatch` and copy params inside `config/confi
 
     'cloudwatch' => [
         'driver' => 'custom',
-        'via' => \TarfinLabs\LaravelCloudWatchLogger\LaravelCloudWatchLoggerFactory::class,
+        'via' => \Hatchet\LaravelCloudWatchLogger\LaravelCloudWatchLoggerFactory::class,
         'aws' => [
             'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
             'version' => 'latest',
@@ -36,6 +36,7 @@ You need to add new channel as `cloudwatch` and copy params inside `config/confi
         'stream' => env('CLOUDWATCH_LOG_STREAM', 'default'),
         'retention' => env('CLOUDWATCH_LOG_RETENTION', 7),
         'level' => env('CLOUDWATCH_LOG_LEVEL', 'error'),
+        'batch_size' => env('CLOUDWATCH_LOG_BATCH_SIZE', 10000),
         'extra' => [
             'env' => env('APP_ENV'),
             'php' => PHP_VERSION,
@@ -75,7 +76,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email development@tarfin.com instead of using the issue tracker.
+If you discover any security related issues, please email support@hatchet.com.au instead of using the issue tracker.
 
 ## Credits
 

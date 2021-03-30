@@ -1,9 +1,9 @@
 <?php
 
-namespace TarfinLabs\LaravelCloudwatchLogger\Tests;
+namespace Hatchet\LaravelCloudwatchLogger\Tests;
 
 use Orchestra\Testbench\TestCase;
-use TarfinLabs\LaravelCloudWatchLogger\LaravelCloudWatchLoggerServiceProvider;
+use Hatchet\LaravelCloudWatchLogger\LaravelCloudWatchLoggerServiceProvider;
 
 class ExampleTest extends TestCase
 {
