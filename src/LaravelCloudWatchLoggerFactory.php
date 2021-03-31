@@ -18,6 +18,11 @@ class LaravelCloudWatchLoggerFactory
         $aws = $config['aws'];
         $tags = $config['tags'] ?? [];
         $name = $config['name'];
+        $enabled = $config['enabled'] ?? true;
+
+        if (! $enabled) {
+            return new Logger($name);
+        }
 
         // Instantiate AWS SDK Cloudwatch Logs Client
         $client = new CloudWatchLogsClient($aws);
