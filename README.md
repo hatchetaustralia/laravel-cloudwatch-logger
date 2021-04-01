@@ -37,6 +37,7 @@ You need to add new channel as `cloudwatch` and copy params inside `config/confi
         'retention' => env('CLOUDWATCH_LOG_RETENTION', 7),
         'level' => env('CLOUDWATCH_LOG_LEVEL', 'error'),
         'batch_size' => env('CLOUDWATCH_LOG_BATCH_SIZE', 10000),
+        'enabled' => env('CLOUDWATCH_ENABLED', true),
         'extra' => [
             'env' => env('APP_ENV'),
             'php' => PHP_VERSION,
